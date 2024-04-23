@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <style>
+        /* --------------------------------------sssss----------------------------------------------- */
+
+
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+button {
+  text-decoration: none;
+  border: none;
+}
+/* h1 { */
+	/* position: absolute;
+  display: inline-table;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 45px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #FFFFF0;
+}
+h2 {
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  font-size: 25px;
+	text-align: center;
+	color: #FFFFF0;
+} */
+.exicon{
+  position: absolute;
+  top: 7%;
+	left: 45%;
+  text-align: center;
+  color: red;
+  font-size: 5rem;
+  display:block;
+}
+.popup-btn{
+	/* position: absolute!important; */
+	/* top: 60%;
+	left: 50%; */
+	/* transform: translate(-50%,-50%); */
+}
+.main-btn-rect,
+.main-btn-circle{
+	position: relative;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	color: #FFFFF0;
+	background-color: rgb(252, 79, 79);
+	text-transform: uppercase;
+	font-size: 25px;
+	letter-spacing: 1px;	
+	outline: none;
+	cursor: pointer;
+	z-index: 100;
+}
+.main-btn-rect {
+	padding: 10px 80px;
+	line-height: 30px;
+}
+.main-btn-rect:before, 
+.main-btn-rect:after{
+  position: absolute;
+  content: '';
+  top:0;
+  width: 0%;
+  height: 100%;
+  background-color: rgba(255, 255, 240, 0.2);
+  -webkit-transition: width 0.3s;
+  -o-transition: width 0.3s;
+  transition: width 0.3s;
+}
+.main-btn-rect:before {
+  left: 0;
+}
+.main-btn-rect:after {
+  right: 0;
+}
+.main-btn-rect:hover:before, 
+.main-btn-rect:hover:after{
+  width: 50%;
+}
+.main-btn-circle{
+	height: 40px;
+	width: 40px;
+	-webkit-border-radius: 50%;
+	border-radius: 100%;
+	line-height: 40px;
+  -webkit-transition: box-shadow 0.3s;
+  -o-transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s;
+}
+.main-btn-circle:hover{   
+  -webkit-box-shadow: inset 2px 1px 0px 20px rgba(255, 255, 240, 0.2);
+  -moz-box-shadow: inset 2px 1px 0px 20px rgba(255, 255, 240, 0.2);
+  box-shadow: inset 2px 1px 0px 20px rgba(255, 255, 240, 0.2);
+}
+.popup{
+  position: fixed;
+	top: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 10001;
+}
+.popup.active{
+  top:0;
+  background-color: rgba(3, 3, 3, 0.98); 
+  transition: background-color .6s ,opacity .6s;
+}
+.popup .main-btn-rect{
+  padding: 10px 100px;
+}
+.popup .popup-content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-height: 568px;
+  min-width: 320px;
+  margin-top: 150px;
+  padding: 25px;
+  background-color: #FFFFF0;
+  color: #070000;
+  -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -o-transform: translateX(-50%) translateY(-50%);
+  transition: margin .6s;
+  -webkit-transition: margin .6s;
+  -moz-transition: margin .6s;
+  -o-transition: margin .6s;
+}
+.popup.active .popup-content{
+  margin-top: 0px;
+}
+.popup-content h6{
+  display: table;
+  font-size: 16px;
+  text-align: center;
+  margin: 10px auto;
+  font-family: 'Roboto',sans-serif;
+  text-transform: uppercase;
+  font-weight: 100;  
+}
+.form-group{
+	position: relative;
+	width: 90%;
+	margin: 0px auto;
+}
+form#send input, form#send textarea{
+	position: relative;
+	margin-bottom: 32px;
+	width: 100%;
+	height: 29px;
+	font-family: 'RobotoLight', sans-serif;
+	text-indent: 20px;
+  background-color: transparent;
+	outline: 0;
+	border: none;
+	border-bottom: 1px solid #070000;
+	-webkit-transition: border 0.6s;
+	-o-transition: border 0.6s;
+	transition: border 0.6s;
+}
+form#send input:focus,
+form#send textarea:focus{
+	border-bottom: 1px solid rgb(63, 173, 168); 
+}
+form#send label{
+	position: absolute;
+	top: 0;
+	line-height: 28px;
+	-webkit-transition: color .5s;
+	-o-transition: color .5s;
+	transition: color .5s;
+}
+form#send input:focus + label,
+form#send textarea:focus + label{
+  color: rgb(63, 173, 168);
+}
+form#send .txt{
+	line-height: 22px;
+	left: 2px;
+}
+form#send .main-btn-rect {
+	position: relative;
+	display: block;
+	padding: 12px 80px;
+	margin: 0px auto;
+	font-size: 14px;
+}
+form#send .main-btn-rect i {
+	margin-right: 5px;
+}
+.popup .fade-out{
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  text-align: center;
+  font-size: 15px;
+}
+.share-wrap{
+	position: absolute;
+  display: inline-table;
+	top: 67%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+  padding: 15px;
+  text-align: center;
+}
+.share-btn{
+  color: #FFFFF0;
+  padding: 7px 25px;
+  text-decoration: none;
+  cursor: pointer;
+  font-weight: 100;
+  font-size: 14px;
+  font-family:'Lobster', sans-serif;
+  background-color: rgba(63, 173, 168, .8);
+  text-transform: uppercase;
+  border-radius: 5px;
+  transition: background-color .5s;
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -o-transition: background-color .5s;
+}
+.share-btn:hover{
+  color: #FFFFF0;
+  text-decoration: none;
+  background-color: rgba(63, 173, 168, 1.0);
+}
+
+.resp-sharing-button__link,
+.resp-sharing-button__icon {
+  display: inline-block
+}
+.resp-sharing-button__link {
+  text-decoration: none;
+  color: #fff;
+  margin: 2px;
+}
+.resp-sharing-button {
+  border-radius: 5px;
+  transition: 25ms ease-out;
+  padding: 6px 9px;
+  transition: background-color .5s;
+  -webkit-transition: background-color .5s;
+  -moz-transition: background-color .5s;
+  -o-transition: background-color .5s;
+}
+.resp-sharing-button__icon svg {
+  width: 1em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: top
+}
+.resp-sharing-button--small svg {
+  margin: 0;
+  vertical-align: middle
+}
+.resp-sharing-button__icon,
+.resp-sharing-button__icon--solid,
+.resp-sharing-button__icon--solidcircle {
+  fill: #fff;
+  stroke: none
+}
+.resp-sharing-button--facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+}
+.resp-sharing-button--facebook:hover,
+.resp-sharing-button--facebook:active {
+  background-color: #2d4373;
+  border-color: #2d4373;
+}
+.resp-sharing-button--twitter {
+  background-color: #55acee;
+  border-color: #55acee;
+}
+.resp-sharing-button--twitter:hover,
+.resp-sharing-button--twitter:active {
+  background-color: #2795e9;
+  border-color: #2795e9;
+}
+.resp-sharing-button--linkedin {
+  background-color: #0077b5;
+  border-color: #0077b5;
+}
+.resp-sharing-button--linkedin:hover,
+.resp-sharing-button--linkedin:active {
+  background-color: #046293;
+  border-color: #046293;
+}
+@media only screen and (max-width: 768px){
+  h1 {font-size: 25px;}
+  h2 {font-size: 14px;}
+  form#send .main-btn-rect {padding: 7px 60px; font-size: 14px;}
+  .popup-btn{padding: 7px 60px; font-size: 14px;}
+}
+
+
+
+        /* ---------------------------------------------ssssss--------------------------------- */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+        nav {
+    background-color: #333;
+    width : 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+header {
+   
+    
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+            align-items: center;
+}
+.logo-container {
+    text-align: center;
+}
+
+.logo-img {
+    width: 120px;
+    
+   
+    
+}
+
+.header-content {
+    flex: 1;
+    text-align: center;
+}
+.header-content> h1 {
+    color: #333;
+    font-size: 36px;
+
+}
+.header-content> p {
+    color: #333;
+    font-size: 20px;
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .backgroundImage {
+            max-width: 100%;
+            height: 400px;
+            margin: 0;
+            border: none;
+        }
+
+        .text {
+            position: absolute;
+            top: 40%;
+            left: 85%;
+            transform: translate(-50%, -50%);
+            color: #57aed1;
+            /* Text color */
+            font-size: 50px;
+        }
+
+        #mainHead {
+            text-align: center;
+            font-size: 330%;
+            color: #ad2c26;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* li{
+    list-style: none;
+    margin-top: 5%;
+}
+
+.listpage{
+    clear: both;
+    margin-top: 50px;
+} */
+
+        .hospitalCategory {
+            margin-top: 5%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hospitals {
+            width: 25%;
+            height: 20%;
+            float: left;
+            margin-right: 50px;
+        }
+
+        .hospitalImage {
+            width: 100%;
+            height: 100%;
+            border: 5px solid rgb(160, 160, 160);
+            border-radius: 2px;
+        }
+
+        .lcontent {
+            float: left;
+            /* width: 60.875%; */
+        }
+
+        .desigsec h2 a {
+            font-family: 'Poppins', sans-serif;
+            color: #ad2c26;
+            text-decoration: none;
+            font-style: normal;
+        }
+
+        .fa {
+            color: green;
+        }
+
+
+        .readmorebtn {
+            background-color: green;
+            border-radius: 25px;
+            text-decoration: none;
+            padding: 10px 20px;
+            color: white;
+        }
+
+        .readmorebtn:hover {
+            background-color: red;
+            transition: background-color 0.4s;
+        }
+
+        .contactlink {
+            background-color: transparent;
+            border: 2px solid red;
+            color: red;
+        }
+
+        .contactlink:hover {
+            color: white;
+            transition: color 0.4s;
+        }
+
+        .list-seperator {
+            clear: both;
+            border: none;
+        }
+
+        .pagination {
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+
+        .pagination a {
+            font-size: 18px;
+            padding: 8px 16px;
+            text-decoration: none;
+            color: green;
+            border-radius: 4px;
+            margin: 0 5px;
+            transition: color 0.3s;
+        }
+
+        .pagination a:hover {
+            color: red;
+        }
+        .listpagefullwidth{
+            margin-left: 20px;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo-img" src="../th.jpeg" alt="Your Logo">
+            <div class="logo-name"><h2>Medictou</h2></div>
+        </div>
+            
+            <div class="header-content">
+                <h1>Medical Tourism in India</h1>
+                <p>Your Gateway to Quality Healthcare</p>
+            </div>
+            <div class="icon">
+                <img src="../icon.png">
+            </div>
+    </header>
+     
+    <nav>
+        <a href="/index.html">Home</a>
+        
+        
+        <div class="dropdown">
+            <a href="#">Treatments</a>
+            <div class="dropdown-content">
+                <a href="/treatment/cardio.html">Cardiology</a>
+                <a href="/treatment/cancer.html">Oncology</a>
+                <a href="/treatment/ortho.html">Orthopedics</a>
+                <a href="/treatment/neuro.html">Neurology</a>
+            </div>
+        </div>
+        
+        
+        <div class="dropdown">
+            <a href="#">Doctors</a>
+            <div class="dropdown-content">
+                <a href="/doctor/cardiology07.html">Cardiology and cardiac surgery</a>
+                <a href="/doctor/oncology07.html">Oncology and Oncosurgery</a>
+                <a href="/doctor/orthopedic07.html">Orthopedics in india</a>
+                <a href="/doctor/generalsur07.html">General surgery in india</a>
+            </div>
+        </div>
+        
+       
+        <div class="dropdown">
+            <a href="#">Hospitals</a>
+            <div class="dropdown-content">
+                <a href="/Minor/Cardiology%20hoapitals/cardiology45.html">Cardiology and cardiac surgery</a>
+                <a href="/Minor/Oncology/oncology45.html">Oncology and Oncosurgery</a>
+                <a href="/Minor/orthopedics/orthopedic.html">Orthopedics in india</a>
+                <a href="/Minor/General%20surgery/general_surgery.html">General surgery in india</a>
+            </div>
+        </div>
+        
+        <a href="#contact">Contact Us</a>
+    </nav>
+    <div class="image-container">
+        <img class="backgroundImage" src="background.jpg" alt="Your Image" width="100%">
+        <h3 class="text">General Surgery in India</h3>
+    </div>
+    <div>
+        <h1 id="mainHead">Best General Surgery Hospitals in India</h1>
+    </div>
+    <div class="listpagefullwidth">
+        <div class="hospitalCategory">
+            <div class="hospitals">
+                <img class="hospitalImage" src="apollo.png" alt="Apollo Hospitals">
+            </div>
+            <div class="lcontent">
+                <div class="desigsec">
+                    <h2><a href="#">Indraprastha Apollo Hospital,New Delhi</a></h2>
+                    <p><i class="fa fa-map-marker"></i> Sarita vihar, Delhi Mathura Road,&nbsp; 
+                        New
+                        Delhi 110076 India</p>
+                    <p><i class="fa fa-ambulance"></i> Multi Specialty</p>
+                    <p><i class="fa fa-bed"></i> 1000</p>
+                </div>
+                <div class="ccontent">
+                    <p>
+                        <a class="readmorebtn"
+                            href="#">Read More</a>
+                            <button type="button" class=" popup-btn readmorebtn contactlink" data-popup="popup-reg">Request Call Back</button>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr class="list-seperator">
+        <div class="hospitalCategory">
+            <div class="hospitals">
+                <img class="hospitalImage" src="Medanta.png" alt="Medanta Hospitals">
+            </div>
+            <div class="lcontent">
+                <div class="desigsec">
+                    <h2><a href="#">Medanta-The Medicity Hospital, Gurgaon</a></h2>
+                    <p><i class="fa fa-map-marker"></i> Chaudhary Baktawar Singh Road,&nbsp; Medicity, Islampur colony
+                         Sector 38 Gurgaon 122001 Haryana, India</p>
+                    <p><i class="fa fa-ambulance"></i> Multi Specialty</p>
+                    <p><i class="fa fa-bed"></i> 1000</p>
+                </div>
+                <div class="ccontent">
+                    <p>
+                        <a class="readmorebtn"
+                            href="#">Read More</a>
+                            <button type="button" class=" popup-btn readmorebtn contactlink" data-popup="popup-reg">Request Call Back</button>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr class="list-seperator">
+        <div class="hospitalCategory">
+            <div class="hospitals">
+                <img class="hospitalImage" src="max.png" alt="Max Hospital">
+            </div>
+            <div class="lcontent">
+                <div class="desigsec">
+                    <h2><a href="#">Max Super Speciality Hospital, Gurgaon</a></h2>
+                    <p><i class="fa fa-map-marker"></i> B Block,&nbsp; Sushant Lok 1, Near HUDA City Centre,
+                        Gurgaon,122001 Haryana India</p>
+                    <p><i class="fa fa-ambulance"></i> Multi Specialty</p>
+                    <p><i class="fa fa-bed"></i> 100</p>
+                </div>
+                <div class="ccontent">
+                    <p>
+                        <a class="readmorebtn"
+                            href="#">Read More</a>
+                            <button type="button" class=" popup-btn readmorebtn contactlink" data-popup="popup-reg">Request Call Back</button>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr class="list-seperator">
+        <div class="hospitalCategory">
+            <div class="hospitals">
+                <img class="hospitalImage" src="blk.png" alt="BLK Hospital">
+            </div>
+            <div class="lcontent">
+                <div class="desigsec">
+                    <h2><a href="#">BLK Super-Speciality Hospital, New Delhi</a></h2>
+                    <p><i class="fa fa-map-marker"></i> Pusa Road,&nbsp; Rajendra Place 
+                         New Delhi 110005 India</p>
+                    <p><i class="fa fa-ambulance"></i> Super Specialty</p>
+                    <p><i class="fa fa-bed"></i> 775</p>
+                </div>
+                <div class="ccontent">
+                    <p>
+                        <a class="readmorebtn"
+                            href="#">Read More</a>
+                            <button type="button" class=" popup-btn readmorebtn contactlink" data-popup="popup-reg">Request Call Back</button>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="pagination">
+            <a href="page2.html">Previous</a>
+            <a href="page6.html">Next</a>
+        </div>
+       
+        <div id="popup-reg" class="popup">
+            <div class="popup-content">
+              <div class="event-header">
+                <h6>Please fill out this form</h6><br>
+              </div>
+                <form id="send" class="send-form">
+                  <div class="form-group">
+                    <input type="text" placeholder="Enter name..." id="name" name="name" required="required">
+                    <label for="name">
+                      <i class="fa fa-user"></i>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" placeholder="Enter phone..." id="phone" name="phone" required="required">
+                    <label for="phone">
+                      <i class="fa fa-phone"></i>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" placeholder="Enter email address..." id="email" name="email" required="required">
+                    <label for="mail">
+                      <i class="fa fa-envelope"></i>
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" placeholder="Enter web address..." id="website" name="website" required="required">
+                    <label for="website">
+                      <i class="fa fa-globe"></i>
+                    </label>
+                  </div>
+                  <button type="submit" class="main-btn-rect" name="text" value="Send">
+                    <i class="fa fa-paper-plane"></i>Send</button>
+                </form>
+              <span class="fade-out main-btn-circle">╳</span>
+            </div>
+          </div>
+            </div>
+            <script>
+                $(document).ready(function(){
+          $('.popup-btn').click(function(){ 
+            var popupBlock = $('#'+$(this).data('popup'));
+            popupBlock.addClass('active')
+              .find('.fade-out').click(function(){
+                popupBlock.css('opacity','0').find('.popup-content').css('margin-top','350px');        
+                setTimeout(function(){
+                  $('.popup').removeClass('active');
+                  popupBlock.css('opacity','').find('.popup-content').css('margin-top','');
+                }, 600);
+              });
+         });
+        });
+            </script>
+</body>
+
+</html>

@@ -8,9 +8,8 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-   /* background-image: url('—Pngtree—spiral light effect background of_1591316.png');*/
-
     
+
 }
 nav {
     background-color: #333;
@@ -91,7 +90,7 @@ header {
 .kshitij{
     background-image: url('EIAT medical hub (1).jpg');
     background-size: cover;
-    width: 95.5%; 
+    width: 100%; 
     height: 700px;
 }
 
@@ -107,7 +106,7 @@ section {
 
 
 #popular-specialties {
-    /* background-color: #fff; */
+    background-color: #fff;
     padding: 40px;
     display: flex;
     flex-wrap: wrap;
@@ -220,9 +219,9 @@ section {
 
 .entry {
     background-color: #fff;
-    border: 1px solid #ddd;
+   /* border: 1px solid #ddd;*/
     border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);*/
     display: inline-block;
     width: 250px;
     margin: 10px;
@@ -281,14 +280,14 @@ section {
     color: black; 
   }
   .container {
-    column-count: 3; /* Adjust the number of columns as needed */
-    column-gap: 20px; /* Adjust the gap between columns as needed */
+    column-count: 3; 
+    column-gap: 20px; 
 }
 
-/* Style for individual service columns */
+
 .services-column {
-    break-inside: avoid; /* Prevent columns from breaking within a service column */
-    margin-bottom: 20px; /* Adjust the margin between columns as needed */
+    break-inside: avoid; 
+    margin-bottom: 20px; 
 }
 #image-section {
     
@@ -296,7 +295,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-size: 100% 100%; /* Cover the entire form section */
+    background-size: 100% 100%; 
     background-repeat: no-repeat;
 }
 
@@ -354,7 +353,7 @@ footer {
     padding: 1em;
     position: relative;
     bottom: 0;
-    width: 100%;
+    width: 98%;
 }
 
 h1, h2 {
@@ -377,16 +376,16 @@ li {
     border-radius: 5px;
 }
 
-/* Center the section content using Flexbox */
+
 .container-fluid.bg-grey.check-treatment-and-travel-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Center vertically on the page */
+    height: 100vh; 
 }
 
-/* Center the entire container content with Flexbox */
+
 .containor {
     display: flex;
     flex-direction: column;
@@ -394,17 +393,17 @@ li {
     align-items: center;
 }
 
-/* Center the sub-heading and the select box */
+
 .select-department {
     text-align: center;
 }
 
-/* Center the selected department message */
+
 .selected-cd.department-pack-active {
     text-align: center;
 }
 
-/* Additional styling for the select box */
+
 select.pack_department {
     width: 100%;
     padding: 10px;
@@ -414,3 +413,31 @@ select.pack_department {
 
 
 
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none; 
+}
+
+
+iframe body {
+    white-space: nowrap; 
+    overflow-x: auto; 
+}
+
+
+.sectioned{
+    display: none;
+}
+.kashyap {
+    width: 400px;
+   
+    margin-left: 575px;
+}
+
+#sectionSelector {
+    
+    padding: 10px;
+    font-size: 16px;
+}
