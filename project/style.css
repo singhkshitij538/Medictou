@@ -1,0 +1,416 @@
+styles.css
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+   /* background-image: url('—Pngtree—spiral light effect background of_1591316.png');*/
+
+    
+}
+nav {
+    background-color: #333;
+    width : 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+header {
+   
+    
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+            align-items: center;
+}
+.logo-container {
+    text-align: center;
+}
+
+.logo-img {
+    width: 120px;
+    
+   
+    
+}
+
+.header-content {
+    flex: 1;
+    text-align: center;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.kshitij{
+    background-image: url('EIAT medical hub (1).jpg');
+    background-size: cover;
+    width: 95.5%; 
+    height: 700px;
+}
+
+
+
+
+section {
+    height: 92%;
+    width: 100%;
+    padding: 2em;
+    text-align: center;
+}
+
+
+#popular-specialties {
+    /* background-color: #fff; */
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.specialty {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: lightblue;
+    border-radius: 20px;
+   
+}
+.specialty:hover {
+    transition: transform 0.4s ease-in-out;
+    transform: scale(1.15); 
+}
+
+  
+
+
+.specialty img {
+    margin-top: 2%;
+    max-width: 100%;
+    border-radius: 20%;
+}
+
+.specialty h3 {
+    color: #333;
+    margin-top: 15px;
+}
+
+.specialty p {
+    color: #555;
+}
+
+.specialty a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    
+}
+
+.specialty a:hover {
+    transition: background-color 0.3s ease-in-out;
+    background-color: #555;
+    
+}
+
+
+@media only screen and (max-width: 768px) {
+    #popular-specialties {
+        padding: 20px;
+    }
+}
+#top-hospitals {
+    background-color: #f4f4f4;
+    padding: 40px;
+    text-align: center;
+ 
+    
+}
+
+#top-hospitals h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hospital {
+  
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 250px;
+    margin: 0;
+    text-align: center;
+    padding: 0;
+}
+
+.hospital img {
+    max-width: 100%;
+    height: 70%;
+    border-radius: 8px;
+}
+
+.hospital h3 {
+    color: #555;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.doctor {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section {
+    padding: 40px;
+}
+
+.section h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.entry {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.entry img {
+    max-width: 100%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+.entry h3 {
+    color: #555;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.entry p {
+    color: green;
+    font-size: 18px;
+    margin-top: 10px;
+    
+}
+
+
+#contact {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+     
+    background-color: #5dc5d4;
+}
+#text-section{
+    margin-top: 55%;
+    text-align: center;
+  font-family: Arial, sans-serif;
+}
+.line1 {
+    font-size: 35px;
+    font-weight: bold;
+    color: #007bff; 
+  }
+  
+  .line2 {
+    font-size: 28px;
+    font-weight: bold;
+    color: #34a853; 
+  }
+  .line3 {
+    font-size: 35px;
+    font-weight: bold;
+    color: black; 
+  }
+  .container {
+    column-count: 3; /* Adjust the number of columns as needed */
+    column-gap: 20px; /* Adjust the gap between columns as needed */
+}
+
+/* Style for individual service columns */
+.services-column {
+    break-inside: avoid; /* Prevent columns from breaking within a service column */
+    margin-bottom: 20px; /* Adjust the margin between columns as needed */
+}
+#image-section {
+    
+    background: url('Dr.-Image.webp') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: 100% 100%; /* Cover the entire form section */
+    background-repeat: no-repeat;
+}
+
+form {
+    max-width: 350px;
+     margin: 0 auto;
+    
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+@media only screen and (max-width: 768px) {
+    form {
+        padding: 20px;
+    }
+}
+
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Center the section content using Flexbox */
+.container-fluid.bg-grey.check-treatment-and-travel-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Center vertically on the page */
+}
+
+/* Center the entire container content with Flexbox */
+.containor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Center the sub-heading and the select box */
+.select-department {
+    text-align: center;
+}
+
+/* Center the selected department message */
+.selected-cd.department-pack-active {
+    text-align: center;
+}
+
+/* Additional styling for the select box */
+select.pack_department {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+

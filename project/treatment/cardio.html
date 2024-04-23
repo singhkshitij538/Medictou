@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardiology Information</title>
+    <style>
+       body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 20px;
+            line-height: 1.6;
+            color: #333;
+         
+            margin: 0 auto;
+            padding: 20px;
+        }
+        nav {
+    background-color: #333;
+    width : 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+        
+nav a {
+    float: left;
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: #333;
+}
+
+header {
+   
+    
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    display: flex;
+            align-items: center;
+}
+.logo-container {
+    text-align: center;
+}
+
+.logo-img {
+    width: 120px;
+    
+   
+    
+}
+
+.header-content {
+    flex: 1;
+    text-align: center;
+}
+.header-content> h1 {
+    color: #333;
+    font-size: 36px;
+
+}
+.header-content> p {
+    color: #333;
+    font-size: 20px;
+
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.2s;
+}
+
+.dropdown-content a:hover {
+    background-color: #555;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+        h1 {
+            font-size: 28px;
+            color: red;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #555;
+        }
+
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin-top: 20px;
+            color: green;
+        }
+
+        ul {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img class="logo-img" src="th.jpeg" alt="Your Logo">
+            <div class="logo-name"><h2>Medictou</h2></div>
+        </div>
+            
+            <div class="header-content">
+                <h1>Medical Tourism in India</h1>
+                <p>Your Gateway to Quality Healthcare</p>
+            </div>
+            <div class="icon">
+                <img src="icon.png">
+            </div>
+    </header>
+   
+    <nav>
+        <a href="http://127.0.0.1:5500/project/index.html">Home</a>
+        
+        
+        <div class="dropdown">
+            <a href="#">Treatments</a>
+            <div class="dropdown-content">
+                <a href="http://127.0.0.1:5500/project/treatment/cardio.html">Cardiology</a>
+                <a href="http://127.0.0.1:5500/project/treatment/cancer.html">Oncology</a>
+                <a href="http://127.0.0.1:5500/project/treatment/ortho.html">Orthopedics</a>
+                <a href="http://127.0.0.1:5500/project/treatment/neuro.html">Neurology</a>
+            </div>
+        </div>
+        
+        
+        <div class="dropdown">
+            <a href="#">Doctors</a>
+            <div class="dropdown-content">
+                <a href="#doctor1">Doctor 1</a>
+                <a href="#doctor2">Doctor 2</a>
+                <a href="#doctor3">Doctor 3</a>
+            </div>
+        </div>
+        
+       
+        <div class="dropdown">
+            <a href="#">Hospitals</a>
+            <div class="dropdown-content">
+                <a href="#hospital1">Hospital 1</a>
+                <a href="#hospital2">Hospital 2</a>
+                <a href="#hospital3">Hospital 3</a>
+            </div>
+        </div>
+        
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <h1>What is Cardiology?</h1>
+    <p>Cardiology is the study and treatment of the heart. A person who specializes in treating and diagnosing cardiovascular systems referred to a cardiologist. But a cardiologist is not always the same as a cardiac surgeon. A cardiac surgeon deals in opening the chest and performs cardiac surgery. The cardiologist carries out tests and performs procedures which include heart catheterizations, inserting a pacemaker and angioplasty.</p>
+    <img src="cardiology2-1024x320.webp" alt="Cardiology Image" style="max-width: 100%; height: auto; display: block; margin: 20px 0; margin-left: 30% ;">
+    <h2>Cardiac Disease vs. Cardiovascular Disease</h2>
+    <p>Cardiac disease relates specifically to the heart, while cardiovascular disease affects the heart and the blood vessels.</p>
+
+    <h1>When to Visit a Cardiologist?</h1>
+    <p>If a person is suffering from various heart conditions then their physician can refer them to a cardiologist.</p>
+    <p><strong>Symptoms indicating heart problem are:</strong></p>
+    <ul>
+        <li>Shortness of breath</li>
+        <li>Dizziness</li>
+        <li>Chest pains</li>
+        <li>Changes in heart rate or rhythm</li>
+        <li>High blood Pressure</li>
+    </ul>
+
+    <h2>Heart Diseases Treated by Cardiologists</h2>
+    <ul>
+        <li>Atherosclerosis</li>
+        <li>Atrial fibrillation</li>
+        <li>Arrhythmias</li>
+        <li>Congenital heart disease</li>
+        <li>Coronary heart disease</li>
+        <li>Congestive heart disease</li>
+        <li>High blood cholesterol and triglycerides</li>
+        <li>Hypertension</li>
+        <li>Pericarditis</li>
+        <li>Ventricular tachycardia</li>
+    </ul>
+
+   
+
+    <h2>Keeping Your Heart Healthy</h2>
+    <p>Try these following ways to keep your healthy and fit:</p>
+    <ul>
+        <li>Eat healthy.</li>
+        <li>Get active.</li>
+        <li>Stay at a healthy weight.</li>
+        <li>Quit smoking.</li>
+        <li>Stay away from secondhand smoke.</li>
+        <li>Control your cholesterol and blood pressure properly.</li>
+        <li>Drink alcohol only at the limit.</li>
+        <li>Manage stress.</li>
+    </ul>
+</body>
+</html>
